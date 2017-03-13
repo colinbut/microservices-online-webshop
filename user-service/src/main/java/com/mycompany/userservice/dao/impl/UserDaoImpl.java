@@ -7,10 +7,12 @@ package com.mycompany.userservice.dao.impl;
 
 import com.mycompany.userservice.dao.UserDao;
 import com.mycompany.userservice.model.User;
+import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Repository
 public class UserDaoImpl implements UserDao {
 
     List<User> users = new ArrayList<>();
