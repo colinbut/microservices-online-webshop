@@ -3,7 +3,7 @@
  * | Copyright © 2017 Colin But. All rights reserved. 
  * |-------------------------------------------------
  */
-package com.mycompany.userservice;
+package com.mycompany.userservice.model;
 
 import java.util.Objects;
 
