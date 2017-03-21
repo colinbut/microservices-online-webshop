@@ -11,6 +11,7 @@
     <properties>
         <spring.version>4.1.6.RELEASE</spring.version>
         <h2.version>1.4.187</h2.version>
+        <slf4j-log4j12.version>1.6.1</slf4j-log4j12.version>
     </properties>
 
     <dependencies>
@@ -69,6 +70,13 @@
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
             <version>${h2.version}</version>
+        </dependency>
+
+        <!-- slf4j-log4j -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>${slf4j-log4j12.version}</version>
         </dependency>
 
     </dependencies>
