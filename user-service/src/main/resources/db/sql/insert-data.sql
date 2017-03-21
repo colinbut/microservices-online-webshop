@@ -1,0 +1,1 @@
+INSERT INTO USERS VALUES (1, 'Colin', 'But', 'colin.but', 'password', 'colin.but@email.co.uk');
