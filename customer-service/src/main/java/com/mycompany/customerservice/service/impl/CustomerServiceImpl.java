@@ -1,6 +1,6 @@
 /*
  * |-------------------------------------------------
- * | Copyright © 2017 Colin But. All rights reserved. 
+ * | Copyright © 2022 Colin But. All rights reserved.
  * |-------------------------------------------------
  */
 package com.mycompany.customerservice.service.impl;
@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
@@ -28,7 +29,11 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public Customer findCustomer(int customerId) {
-        return customerRepository.findOne(customerId);
+        Optional<Customer> customerOptional = customerRepository.findById(customerId);
+        if (customerOptional.isPresent()) {
+            return customerOptional.get();
+        }
+        throw new NullPointerException();
     }
 
     @Override
@@ -38,7 +43,7 @@ public class CustomerServiceImpl implements CustomerService {
 
     @Override
     public void deleteCustomer(int customerId) {
-        customerRepository.delete(customerId);
+        customerRepository.deleteById(customerId);
     }
 
 }
