@@ -1,6 +1,6 @@
 /*
  * |-------------------------------------------------
- * | Copyright © 2017 Colin But. All rights reserved. 
+ * | Copyright © 2022 Colin But. All rights reserved.
  * |-------------------------------------------------
  */
 package com.mycompany.customerservice.model;
