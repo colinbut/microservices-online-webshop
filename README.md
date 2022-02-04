@@ -29,3 +29,5 @@ username: user
 password: <printed on console during application startup>
 
 The username & password can be configured via the `spring.security.user.name` and the `spring.security.user.password` properties respectively.
+
+![spring-boot-admin](etc/spring-boot-admin-server.png)
