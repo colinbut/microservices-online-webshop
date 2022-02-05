@@ -32,6 +32,8 @@ The username & password can be configured via the `spring.security.user.name` an
 
 ![spring-boot-admin](etc/spring-boot-admin-server.png)
 
+![spring-boot-admin-dashboard](etc/spring-boot-admin-server-dashboard.png)
+
 ## Author
 
 Colin But.
