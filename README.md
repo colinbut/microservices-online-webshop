@@ -1,8 +1,12 @@
 # Microservices Online Webshop
 
+This is an example microservices application in Java that is used for demo purposes.
+
 ## Customer Service
 
 Spring Boot Application
+
+- Java 11
 
 ## User Service
 
@@ -19,6 +23,10 @@ Spring Application
 
 Spring Boot Application
 
+- Java 11
+
+Sends tomcat access logs as JSON to stdout. Also ships app logs to stdout as JSON.
+
 ## Spring Boot Admin
 
 Login UI
@@ -33,6 +41,10 @@ The username & password can be configured via the `spring.security.user.name` an
 ![spring-boot-admin](etc/spring-boot-admin-server.png)
 
 ![spring-boot-admin-dashboard](etc/spring-boot-admin-server-dashboard.png)
+
+Can inspect the details:
+
+![spring-boot-admin-details](etc/spring-boot-admin-server-details.png)
 
 ## Author
 
