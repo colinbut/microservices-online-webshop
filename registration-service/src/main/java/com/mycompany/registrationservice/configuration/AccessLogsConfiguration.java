@@ -10,7 +10,7 @@ import org.springframework.context.annotation.Configuration;
 public class AccessLogsConfiguration {
 
     @Bean
-    public WebServerFactoryCustomizer<TomcatServletWebServerFactory> acessLogsCustomizer() {
+    public WebServerFactoryCustomizer<TomcatServletWebServerFactory> accessLogsCustomizer() {
         return factory -> {
             var logbackValue = new LogbackValve();
             logbackValue.setFilename("logback-access.xml");
