@@ -1,14 +1,4 @@
-FROM frolvlad/alpine-oraclejdk8:slim
-
-# this is where Spring Boot Application creates working directories for tomcat by default
-# Optional here but necessary if needed to write to filesystem
+FROM openjdk:11.0.13-jdk-oraclelinux8
 VOLUME /tmp
-
-ADD registration-service-0.0.1-SNAPSHOT.jar app.jar
-
-# so the jar has modified time
-# optional here - but must be necessary for static content like html
-RUN sh -c 'touch /app.jar'
-
-# reduce tomcat startup time - source of entropy
+ADD target/registration-service-0.0.1-SNAPSHOT.jar app.jar
 ENTRYPOINT ["java", "-Djava.security.egd=file:/dev/./urandom","-jar","/app.jar"]
