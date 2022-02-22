@@ -1,0 +1,24 @@
+apiVersion: apps/v1 #  for k8s versions before 1.9.0 use apps/v1beta2  and before 1.8.0 use extensions/v1beta1
+kind: Deployment
+metadata:
+  name: spring-boot-admin
+spec:
+  selector:
+    matchLabels:
+      app: spring-boot-admin
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: spring-boot-admin
+        tier: backend
+    spec:
+      containers:
+      - name: spring-boot-admin
+        image: colinbut/spring-boot-admin:latest
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
+        ports:
+        - containerPort: 6110
