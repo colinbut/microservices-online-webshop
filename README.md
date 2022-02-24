@@ -46,6 +46,15 @@ Can inspect the details:
 
 ![spring-boot-admin-details](etc/spring-boot-admin-server-details.png)
 
+
+## Deployment
+
+### Helm
+
+```bash
+helm install --name microservices-online-webshop --values=./deployments/helm/dev-values.yml
+```
+
 ## Author
 
 Colin But.
