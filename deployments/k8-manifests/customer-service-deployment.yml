@@ -1,0 +1,24 @@
+apiVersion: apps/v1 #  for k8s versions before 1.9.0 use apps/v1beta2  and before 1.8.0 use extensions/v1beta1
+kind: Deployment
+metadata:
+  name: customer-service
+spec:
+  selector:
+    matchLabels:
+      app: customer-service
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: customer-service
+        tier: backend
+    spec:
+      containers:
+      - name: customer-service
+        image: colinbut/customer-service:latest
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
+        ports:
+        - containerPort: 6111
