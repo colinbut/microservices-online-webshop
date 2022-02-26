@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: spring-boot-admin
-        image: colinbut/spring-boot-admin:latest
+        image: colinbut/spring-admin-server:latest
         resources:
           requests:
             cpu: 100m
