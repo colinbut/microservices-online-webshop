@@ -1,0 +1,20 @@
+environment: dev
+
+registrationsvc:
+  container:
+    name: registration-service
+    port: 6112
+    image: colinbut/registration-service
+    tag: latest
+    nodePort: 30007
+  replicas: 1
+
+customersvc:
+  container:
+    name: customer-service
+    port: 6112
+    image: colinbut/customer-service
+    tag: latest
+    nodePort: 30008
+  replicas: 1
+

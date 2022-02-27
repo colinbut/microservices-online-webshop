@@ -1,0 +1,4 @@
+name: microservices-online-webshop
+sources:
+  - https://github.com/colinbut/microservices-online-webshop
+version: 1.0.1
