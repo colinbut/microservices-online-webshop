@@ -18,3 +18,12 @@ customersvc:
     nodePort: 30008
   replicas: 1
 
+springbootadmin:
+  container:
+    name: spring-boot-admin
+    port: 6112
+    image: colinbut/spring-admin-server
+    tag: latest
+    nodePort: 30008
+  replicas: 1
+
