@@ -55,6 +55,21 @@ Can inspect the details:
 helm install --name microservices-online-webshop --values=./deployments/helm/dev-values.yml
 ```
 
+### K8 Manifests
+
+e.g. to deploy a single particular microservice:
+
+```bash
+kubectl apply -f ./deployments/k8-manifests/registration-service-deployment.yml
+kubectl apply -f ./deployments/k8-manifests/registration-service-svc.yml
+```
+
+or to deploy all microservices:
+
+```bash
+kubectl apply -f ./deployments/k8-manifests/all.yml
+```
+
 ## Author
 
 Colin But.
