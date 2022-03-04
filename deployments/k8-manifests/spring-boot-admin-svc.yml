@@ -11,6 +11,6 @@ spec:
   ports:
   - name: http
     nodePort: 30009
-    port: 6111
-    targetPort: 6111
+    port: 6110
+    targetPort: 6110
     protocol: TCP
