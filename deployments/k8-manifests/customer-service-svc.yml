@@ -10,7 +10,7 @@ spec:
     app: customer-service
   ports:
   - name: http
-    nodePort: 30007
+    nodePort: 30009
     port: 6112
     targetPort: 6112
     protocol: TCP

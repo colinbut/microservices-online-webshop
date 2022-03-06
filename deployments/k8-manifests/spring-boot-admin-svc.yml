@@ -10,7 +10,7 @@ spec:
     app: spring-boot-admin
   ports:
   - name: http
-    nodePort: 30009
+    nodePort: 30007
     port: 6110
     targetPort: 6110
     protocol: TCP

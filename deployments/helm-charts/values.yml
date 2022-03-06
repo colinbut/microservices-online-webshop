@@ -15,7 +15,7 @@ customersvc:
     port: 6112
     image: colinbut/customer-service
     tag: latest
-    nodePort: 30007
+    nodePort: 30009
   replicas: 1
 
 springbootadmin:
@@ -24,6 +24,6 @@ springbootadmin:
     port: 6110
     image: colinbut/spring-admin-server
     tag: latest
-    nodePort: 30009
+    nodePort: 30007
   replicas: 1
 
