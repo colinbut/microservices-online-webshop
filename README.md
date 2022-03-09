@@ -46,6 +46,10 @@ Can inspect the details:
 
 ![spring-boot-admin-details](etc/spring-boot-admin-server-details.png)
 
+Looking at Threads:
+
+![spring-boot-admin-thread](etc/spring-boot-admin-server-threads.png)
+
 
 ## Deployment
 
