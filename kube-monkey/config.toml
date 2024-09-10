@@ -1,0 +1,8 @@
+[kubemonkey]
+dry_run = true
+run_hour = 14
+start_hour = 14
+end_hour = 17
+blacklisted_namespaces = ["kube-system"]
+whitelisted_namespaces = ["default"]
+time_zone = "America/New_York"

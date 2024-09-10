@@ -2,6 +2,10 @@ apiVersion: apps/v1 #  for k8s versions before 1.9.0 use apps/v1beta2  and befor
 kind: Deployment
 metadata:
   name: spring-boot-admin
+  kube-monkey/enabled: enabled
+  kube-monkey/identifier: spring-boot-admin
+  kube-monkey/mtbf: '1'
+  kube-monkey/kill-mode: "kill-all"
 spec:
   selector:
     matchLabels:
@@ -12,6 +16,10 @@ spec:
       labels:
         app: spring-boot-admin
         tier: backend
+        kube-monkey/enabled: enabled
+        kube-monkey/identifier: spring-boot-admin
+        kube-monkey/mtbf: '1'
+        kube-monkey/kill-mode: "kill-all"
     spec:
       containers:
       - name: spring-boot-admin

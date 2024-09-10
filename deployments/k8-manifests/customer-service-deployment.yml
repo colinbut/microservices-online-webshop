@@ -2,16 +2,26 @@ apiVersion: apps/v1 #  for k8s versions before 1.9.0 use apps/v1beta2  and befor
 kind: Deployment
 metadata:
   name: customer-service
+  kube-monkey/enabled: enabled
+  kube-monkey/identifier: customer-service
+  kube-monkey/mtbf: '2'
+  kube-monkey/kill-mode: "fixed"
+  kube-monkey/kill-value: '1'
 spec:
   selector:
     matchLabels:
       app: customer-service
-  replicas: 1
+  replicas: 3
   template:
     metadata:
       labels:
         app: customer-service
         tier: backend
+        kube-monkey/enabled: enabled
+        kube-monkey/identifier: customer-service
+        kube-monkey/mtbf: '2'
+        kube-monkey/kill-mode: "fixed"
+        kube-monkey/kill-value: '1'
     spec:
       containers:
       - name: customer-service

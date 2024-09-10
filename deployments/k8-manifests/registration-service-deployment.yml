@@ -2,16 +2,26 @@ apiVersion: apps/v1 #  for k8s versions before 1.9.0 use apps/v1beta2  and befor
 kind: Deployment
 metadata:
   name: registration-service
+  kube-monkey/enabled: enabled
+  kube-monkey/identifier: registration-service
+  kube-monkey/mtbf: '1'
+  kube-monkey/kill-mode: "fixed-percent"
+  kube-monkey/kill-value: '30'
 spec:
   selector:
     matchLabels:
       app: registration-service
-  replicas: 1
+  replicas: 3
   template:
     metadata:
       labels:
         app: registration-service
         tier: backend
+        kube-monkey/enabled: enabled
+        kube-monkey/identifier: registration-service
+        kube-monkey/mtbf: '1'
+        kube-monkey/kill-mode: "fixed-percent"
+        kube-monkey/kill-value: '30'
     spec:
       containers:
       - name: registration-service
